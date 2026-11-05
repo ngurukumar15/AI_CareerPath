@@ -1,4 +1,4 @@
-# CareerPath AI (v2.0)
+# AI_CareerPath (v2.0)
 
 > **Intelligent, Privacy-Conscious Career Guidance Platform with Deterministic Matching, 12-Week Learning Roadmaps, and Free-Tier Gemini AI Integration.**
 
@@ -69,8 +69,8 @@ CareerPath AI requires zero build step or heavy bundler dependencies.
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/thevibingteen/Career-Path-AI.git
-cd Career-Path-AI
+git clone https://github.com/ngurukumar15/AI_CareerPath.git
+cd AI_CareerPath
 ```
 
 ### 2. Configure Environment (Optional)
