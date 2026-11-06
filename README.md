@@ -93,7 +93,7 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### 4. Official website
-```https://ai-careepath.vercel.app/```
+Click [https://ai-careepath.vercel.app/](https://ai-careepath.vercel.app/) to open
 
 ---
 
