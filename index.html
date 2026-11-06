@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI_CareerPath | Find Your Tech Career Path</title>
+  <meta name="description" content="Intelligent, privacy-conscious personal career guidance platform. Deterministic matching, skill-gap analysis, personalized 12-week roadmaps, and free-tier AI coaching.">
+  <meta name="keywords" content="career advice, skill gap analysis, learning roadmap, developer careers, AI career coach, interview prep">
+  
+  <!-- Open Graph / Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI_CareerPath — Career Planning &amp; Skill Gap Engine">
+  <meta property="og:description" content="Discover career paths matching your profile, identify missing skills, and build a 12-week learning roadmap.">
+  <meta property="og:url" content="https://careerpath-ai.vercel.app/">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI_CareerPath — Career Planning &amp; Skill Gap Engine">
+  <meta name="twitter:description" content="Discover career paths matching your profile, identify missing skills, and build a 12-week learning roadmap.">
+
+  <!-- Favicon & PWA Manifest -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#5b4ce2">
+
+  <!-- Modern Typography (Plus Jakarta Sans & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient-art" aria-hidden="true">
+    <svg class="ambient-art-scene" viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ambient-cube-front" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#a78bfa" stop-opacity=".2"/>
+          <stop offset="1" stop-color="#8b5cf6" stop-opacity=".04"/>
+        </linearGradient>
+        <linearGradient id="ambient-cube-side" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#2dd4bf" stop-opacity=".2"/>
+          <stop offset="1" stop-color="#14b8a6" stop-opacity=".04"/>
+        </linearGradient>
+        <linearGradient id="ambient-cube-top" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f0abfc" stop-opacity=".24"/>
+          <stop offset="1" stop-color="#c084fc" stop-opacity=".06"/>
+        </linearGradient>
+        <filter id="ambient-shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+          <feOffset dy="8"/>
+          <feComponentTransfer><feFuncA type="linear" slope=".12"/></feComponentTransfer>
+          <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <g class="ambient-shape ambient-cube" filter="url(#ambient-shadow)" stroke-linejoin="round">
+        <path d="M170 220 230 185 290 220 230 255Z" fill="url(#ambient-cube-top)" stroke="#c4b5fd" stroke-opacity=".55"/>
+        <path d="M170 220 230 255 230 325 170 290Z" fill="url(#ambient-cube-front)" stroke="#a78bfa" stroke-opacity=".5"/>
+        <path d="M230 255 290 220 290 290 230 325Z" fill="url(#ambient-cube-side)" stroke="#5eead4" stroke-opacity=".48"/>
+        <path d="M170 220 230 185 290 220 290 290 230 325 170 290Z" fill="none" stroke="#fff" stroke-opacity=".2"/>
+      </g>
+
+      <g class="ambient-shape ambient-orb" filter="url(#ambient-shadow)">
+        <circle cx="1240" cy="210" r="52" fill="#c084fc" fill-opacity=".08" stroke="#c4b5fd" stroke-opacity=".45" stroke-width="1.5"/>
+        <ellipse cx="1240" cy="210" rx="52" ry="19" fill="none" stroke="#5eead4" stroke-opacity=".48" transform="rotate(-32 1240 210)"/>
+        <path d="M1195 183c25 15 64 42 88 60M1206 250c21-27 46-54 70-76" fill="none" stroke="#c4b5fd" stroke-opacity=".32"/>
+        <circle cx="1240" cy="210" r="5" fill="#5eead4" fill-opacity=".7"/>
+      </g>
+
+      <g class="ambient-shape ambient-pyramid" stroke-linejoin="round">
+        <path d="m1090 675 62-112 65 112Z" fill="#f0abfc" fill-opacity=".08" stroke="#e9a8ff" stroke-opacity=".48" stroke-width="1.5"/>
+        <path d="m1152 563 14 112h-76Z" fill="#a78bfa" fill-opacity=".1" stroke="#c4b5fd" stroke-opacity=".38"/>
+        <path d="m1152 563 65 112h-51Z" fill="#2dd4bf" fill-opacity=".08" stroke="#5eead4" stroke-opacity=".4"/>
+      </g>
+
+      <g class="ambient-icon ambient-code" filter="url(#ambient-shadow)">
+        <circle cx="430" cy="570" r="31" fill="#8b5cf6" fill-opacity=".08" stroke="#c4b5fd" stroke-opacity=".45"/>
+        <path d="m421 559-10 11 10 11m18-22 10 11-10 11m-5-27-8 30" fill="none" stroke="#8b5cf6" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <g class="ambient-icon ambient-book" filter="url(#ambient-shadow)">
+        <circle cx="1010" cy="410" r="29" fill="#14b8a6" fill-opacity=".08" stroke="#5eead4" stroke-opacity=".42"/>
+        <path d="M1010 399c-6-5-14-5-19-3v22c6-2 13-2 19 3m0-22c6-5 14-5 19-3v22c-6-2-13-2-19 3m0-22v22" fill="none" stroke="#0f9f93" stroke-opacity=".8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <g class="ambient-icon ambient-spark" filter="url(#ambient-shadow)">
+        <circle cx="320" cy="790" r="24" fill="#fb923c" fill-opacity=".08" stroke="#fdba74" stroke-opacity=".48"/>
+        <path d="m320 776 3.8 9.9 10.2 4.1-10.2 3.7L320 804l-3.8-10.3-10.2-4 10.2-3.8Z" fill="#fb923c" fill-opacity=".38" stroke="#fb923c" stroke-opacity=".7" stroke-linejoin="round"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Global Application Header -->
+  <header class="app-header" role="banner">
+    <div class="container header-content">
+      <a href="#" class="brand" id="brandLink" aria-label="AI_CareerPath Home">
+        <div class="brand-icon" aria-hidden="true">🚀</div>
+        <div>
+          <span class="brand-title">AI CareerPath </span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <!-- AI vs Local Mode Indicator Badge -->
+        <span id="aiStatusBadge" class="badge badge-local" title="Operating with zero-cost deterministic matching">
+          <span aria-hidden="true">⚡</span> Local Guidance Mode
+        </span>
+
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" class="btn btn-ghost btn-sm" aria-label="Toggle Light/Dark Theme" title="Toggle theme">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+
+        <!-- Data Backup / Export Button -->
+        <button id="dataBackupBtn" class="btn btn-ghost btn-sm" aria-label="Backup or restore career data" title="Backup or Restore Data">
+          <span aria-hidden="true">💾</span> Data
+        </button>
+
+        <!-- Help & Support -->
+        <button id="helpSupportBtn" class="btn btn-ghost btn-sm" aria-label="Help and documentation" title="Help & Support">
+          <span aria-hidden="true">❓</span> Help
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Application Region -->
+  <main id="app" class="container app-main" role="main">
+    <!-- Dynamically rendered by js/app.js: Onboarding Wizard OR Results Dashboard -->
+  </main>
+
+  <div id="appToast" class="app-toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+
+  <!-- AI Career Coach Floating Drawer & FAB -->
+  <div id="coachContainer">
+    <!-- Floating Action Button -->
+    <button id="coachFab" class="coach-fab" aria-label="Open AI Career Coach" title="Ask AI Career Coach">
+      <span aria-hidden="true">💬</span>
+    </button>
+
+    <!-- Slide-up Coach Drawer -->
+    <section id="coachDrawer" class="coach-drawer" style="display: none;" aria-label="AI Career Coach Drawer">
+      <div class="coach-header">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span aria-hidden="true">🤖</span>
+          <strong>AI Career Coach</strong>
+        </div>
+        <button id="closeCoachBtn" class="btn btn-ghost btn-sm" style="color: white;" aria-label="Close Coach Drawer">✕</button>
+      </div>
+
+      <div id="coachChatBody" class="coach-body">
+        <div class="chat-bubble chat-bubble-coach">
+          Hello! I'm your CareerPath AI Coach. Ask me anything about your roadmap, skill gaps, interview prep, or resume strategies!
+        </div>
+      </div>
+
+      <!-- Quick Prompt Suggestions -->
+      <div id="coachSuggestions" style="padding: 0.4rem 0.8rem; background: var(--bg-card); display: flex; gap: 0.4rem; overflow-x: auto; border-top: 1px solid var(--border);">
+        <button class="chip btn-sm coach-prompt-chip" data-prompt="What should I learn this week?">What should I learn first?</button>
+        <button class="chip btn-sm coach-prompt-chip" data-prompt="Suggest a project for my portfolio.">Portfolio idea?</button>
+        <button class="chip btn-sm coach-prompt-chip" data-prompt="Give me a mock interview question.">Interview practice</button>
+      </div>
+
+      <form id="coachForm" class="coach-footer">
+        <input type="text" id="coachInput" class="form-input" placeholder="Ask a career or technical question..." aria-label="Your message to AI Coach" required autocomplete="off">
+        <button type="submit" class="btn btn-primary btn-sm" id="coachSendBtn">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Accessible Modals -->
+  <!-- 1. Data Backup & Restore Modal -->
+  <div id="backupModal" class="modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="backupModalTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="backupModalTitle" class="modal-title">Career Data Backup &amp; Privacy</h2>
+        <button class="modal-close" data-close-modal="backupModal" aria-label="Close modal">✕</button>
+      </div>
+      <div>
+        <p style="margin-bottom: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+          CareerPath AI stores your profile, progress, and roadmap notes locally on your device. You can export your data to a JSON file or import a previous backup at any time.
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+          <button id="exportDataBtn" class="btn btn-primary">
+            <span>📥</span> Export My Data (JSON)
+          </button>
+          <label class="btn btn-secondary" style="cursor: pointer;">
+            <span>📤</span> Import Backup (JSON)
+            <input type="file" id="importFileInput" accept=".json" style="display: none;">
+          </label>
+          <button id="resetAllDataBtn" class="btn btn-ghost" style="color: var(--danger);">
+            <span>🗑️</span> Reset All Data
+          </button>
+        </div>
+        <div id="backupNotification" style="font-size: 0.85rem; color: var(--primary);"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Help & Support Modal -->
+  <div id="helpModal" class="modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="helpModalTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="helpModalTitle" class="modal-title">Help &amp; Transparency Guide</h2>
+        <button class="modal-close" data-close-modal="helpModal" aria-label="Close modal">✕</button>
+      </div>
+      <div style="font-size: 0.9rem; color: var(--text-main); display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <h3 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.25rem;">How Fit Scores Work</h3>
+          <p style="color: var(--text-muted);">
+            Fit scores are computed by our deterministic weighted matching algorithm across 5 dimensions: Skill fit (45%), Domain interest (20%), Experience suitability (15%), Role alignment (10%), and Work preferences (10%). We never guarantee employment; scores represent estimated profile alignment.
+          </p>
+        </div>
+        <div>
+          <h3 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.25rem;">Free-Tier &amp; Offline Operation</h3>
+          <p style="color: var(--text-muted);">
+            If Gemini AI quota is busy or unavailable, CareerPath AI seamlessly falls back to Local Guidance Mode using our comprehensive local career catalog and algorithms.
+          </p>
+        </div>
+        <div>
+          <h3 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.25rem;">Found a Bug or Want to Contribute?</h3>
+          <p style="color: var(--text-muted);">
+            Visit our open-source GitHub repository to file an issue or submit improvements:<br>
+            <a href="https://github.com/thevibingteen/Career-Path-AI" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 600;">github.com/thevibingteen/Career-Path-AI</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Share Modal -->
+  <div id="shareModal" class="modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="shareModalTitle" class="modal-title">Share Your Career Summary</h2>
+        <button class="modal-close" data-close-modal="shareModal" aria-label="Close modal">✕</button>
+      </div>
+      <div>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+          Your private personal details stay safe. Share a clean summary of your top career match and learning trajectory:
+        </p>
+        <textarea id="shareSummaryText" class="form-textarea" rows="4" readonly style="font-size: 0.85rem; margin-bottom: 1rem;"></textarea>
+        <div style="display: flex; gap: 0.75rem;">
+          <button id="copyShareBtn" class="btn btn-primary">
+            <span>📋</span> Copy to Clipboard
+          </button>
+          <button id="nativeShareBtn" class="btn btn-secondary">
+            <span>📤</span> Share...
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer-content">
+      <p>
+        <strong>CareerPath AI</strong> — Intelligent Career Guidance Platform &bull; Built with ❤️ by Team Neurix
+      </p>
+      <p class="site-footer-note">
+        Informational career planning guidance. Compensation and hiring metrics are indicative benchmarks from public surveys. Always verify local market conditions.
+      </p>
+      <div class="site-footer-links">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/disclaimer.html">Career Disclaimer</a>
+        <a href="https://github.com/thevibingteen/Career-Path-AI" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+        <a href="/robots.txt">Robots.txt</a>
+        <a href="/sitemap.xml">Sitemap</a>
+        <a href="/security.txt">Security.txt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
